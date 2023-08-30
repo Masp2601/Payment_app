@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:text="@string/activity_cliente_edit"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:elevation="4dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/client_name"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/clientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        tools:text="Nelson"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cliente_last_name"
+        android:layout_marginTop="5dp"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/clientLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        tools:text="Mata"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cliente_nit"
+        android:layout_marginTop="5dp"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/clientNit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        tools:text="15.244.168"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cliente_email"
+        android:layout_marginTop="5dp"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/clientEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        tools:text="njmata@gmail.com"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cliente_phone"
+        android:layout_marginTop="5dp"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/clientPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        tools:text="(321) 423 9412"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cliente_address"
+        android:layout_marginTop="5dp"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/clientDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        tools:text="Lleras"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cliente_birthday"
+        android:layout_marginTop="5dp"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorAccent"/>
+    <TextView
+        android:id="@+id/clientBirthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body1"
+        tools:text="17/11/2017"/>
+</LinearLayout>

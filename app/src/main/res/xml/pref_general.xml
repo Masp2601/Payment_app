@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:key="@string/pref_key_display_name"
+        android:defaultValue="@string/pref_default_display_name"
+        android:title="@string/pref_title_display_name"
+        android:capitalize="words"
+        android:inputType="textCapWords"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <EditTextPreference
+        android:key="@string/pref_key_nit"
+        android:defaultValue="@string/pref_default_nit"
+        android:title="@string/pref_title_nit"
+        android:inputType="text"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <EditTextPreference
+        android:key="@string/pref_key_telephone_number"
+        android:defaultValue="@string/pref_default_telephone_number"
+        android:title="@string/pref_title_telephone_number"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"/>
+
+    <EditTextPreference
+        android:key="@string/pref_key_email"
+        android:defaultValue="@string/pref_default_email"
+        android:title="@string/pref_title_email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"/>
+
+    <EditTextPreference
+        android:key="@string/pref_key_direction"
+        android:defaultValue="@string/pref_default_direction"
+        android:title="@string/pref_title_direction"
+        android:inputType="text"
+        android:selectAllOnFocus="true"/>
+
+</PreferenceScreen>

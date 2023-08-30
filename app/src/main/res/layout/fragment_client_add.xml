@@ -1,0 +1,99 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.softmed.payment.ClientAddFragment">
+
+    <TextView
+        android:id="@+id/titleNewClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/title_new_client" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@id/titleNewClient">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilClientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/clientNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/client_name"
+                android:inputType="textCapWords"
+                app:layout_constraintTop_toBottomOf="@id/clientNameText"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilClientLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tilClientName">
+
+            <EditText
+                android:id="@+id/clientLastNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="@string/cliente_last_name"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilClientNit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tilClientLastName">
+
+            <EditText
+                android:id="@+id/clientNitEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/cliente_nit"
+                app:layout_constraintTop_toBottomOf="@id/clientNitText"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/clientCancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/clientSaveButton"
+            app:layout_constraintBaseline_toBaselineOf="@id/clientSaveButton"/>
+        <Button
+            android:id="@+id/clientSaveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_save"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tilClientNit"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/clientCancelButton"
+            style="@android:style/Widget.Material.Button.Colored"
+            tools:targetApi="23"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

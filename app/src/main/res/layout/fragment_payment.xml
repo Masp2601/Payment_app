@@ -1,0 +1,234 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.softmed.payment.PaymentFragment">
+
+    <TextView
+        android:id="@+id/paymentMethodTitle"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:text="@string/payment_title"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/paymentTotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/payment_total"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodTitle" />
+
+    <com.softmed.payment.helpers.CurrencyTextView
+        android:id="@+id/paymentTotal"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentTotalText"
+        tools:text="10000" />
+
+    <TextView
+        android:id="@+id/paymentMethodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/payment_method_type"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentTotal" />
+
+    <Spinner
+        android:id="@+id/paymentMethodSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodText" />
+
+    <!-- Pago en Efectivo -->
+    <TextView
+        android:id="@+id/paymentCashText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:labelFor="@id/paymentCash"
+        android:text="@string/payment_cash"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCreditDeposit"
+        android:visibility="visible"/>
+
+    <com.softmed.payment.helpers.CurrencyEditText
+        android:id="@+id/paymentCash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCashText"
+        android:visibility="visible"
+        tools:text="10000.0" />
+
+    <TextView
+        android:id="@+id/paymentReturnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/payment_return"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCash"
+        android:visibility="visible"/>
+
+    <com.softmed.payment.helpers.CurrencyTextView
+        android:id="@+id/paymentReturn"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentReturnText"
+        tools:text="0.0"
+        android:visibility="visible" />
+
+    <!--Pagos con tarjeta-->
+    <TextView
+        android:id="@+id/paymentReferenceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:labelFor="@id/paymentReference"
+        android:text="@string/payment_approve_reference"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodSpinner" />
+
+    <EditText
+        android:id="@+id/paymentReference"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentReferenceText"
+        tools:text="122345687" />
+
+    <!-- Pagos con cheque -->
+    <TextView
+        android:id="@+id/paymentCheckNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:labelFor="@id/paymentCheckNumber"
+        android:text="@string/payment_check_number"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodSpinner" />
+
+    <EditText
+        android:id="@+id/paymentCheckNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCheckNumberText"
+        tools:text="2563214511" />
+
+    <TextView
+        android:id="@+id/paymentCheckBankNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:labelFor="@id/paymentCheckBankName"
+        android:text="@string/payment_check_bank_name"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCheckNumber" />
+
+    <EditText
+        android:id="@+id/paymentCheckBankName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="textCapWords"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCheckBankNameText" />
+
+    <!-- Pagos a crédito-->
+    <TextView
+        android:id="@+id/paymentCreditDepositText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/payment_credit_deposit"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentMethodSpinner" />
+
+    <com.softmed.payment.helpers.CurrencyEditText
+        android:id="@+id/paymentCreditDeposit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentCreditDepositText"
+        tools:text="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

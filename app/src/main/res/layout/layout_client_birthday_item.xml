@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/clientNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nelson Mata"/>
+
+    <TextView
+        android:id="@+id/clientMonthDayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/clientNameText"
+        app:layout_constraintRight_toLeftOf="@id/clientAgeText"
+        tools:text="11/21"/>
+
+    <TextView
+        android:id="@+id/clientAgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/clientNameText"
+        tools:text="33"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="@string/pref_key_bills_from"
+        android:defaultValue="@string/pref_default_bills_from"
+        android:title="@string/pref_title_bills_from"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"/>
+
+    <EditTextPreference
+        android:key="@string/pref_key_bills_to"
+        android:defaultValue="@string/pref_default_bills_to"
+        android:title="@string/pref_title_bills_to"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"/>
+</PreferenceScreen>

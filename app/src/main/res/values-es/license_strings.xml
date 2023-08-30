@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="license_type_annual">Anual</string>
+    <string name="license_type_monthly">Mensual</string>
+    <string name="license_type_free">Prueba</string>
+    <string name="license_type_distributor">Distribuidor</string>
+</resources>

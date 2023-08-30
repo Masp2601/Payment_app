@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "382005102604",
+    "firebase_url": "https://invoiceapp-f6e63.firebaseio.com",
+    "project_id": "invoiceapp-f6e63",
+    "storage_bucket": "invoiceapp-f6e63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382005102604:android:85a47c8e0f36f350",
+        "android_client_info": {
+          "package_name": "com.softmed.payment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382005102604-n8rm0750hgtsgpanfqu9ep3ncubank51.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softmed.payment",
+            "certificate_hash": "8e800835a8a49bfebbe885c6e52655b5046a6aff"
+          }
+        },
+        {
+          "client_id": "382005102604-cq35gljvgqp8965m9piiig7puq67qmam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwrzl4c4WtF8InzO5dc1sAFrzm4Sw6UYA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382005102604-cq35gljvgqp8965m9piiig7puq67qmam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

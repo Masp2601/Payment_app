@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="com.softmed.payment.LicenseActivity">
+
+    <TextView
+        android:id="@+id/licenseTypeLabel"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/license_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/licenseTypeValue"
+        style="@style/TextAppearance.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/licenseTypeLabel"
+        tools:text="Distribuidor" />
+
+    <TextView
+        android:id="@+id/expirationDateLabel"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/license_expiration_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/licenseTypeValue" />
+
+    <TextView
+        android:id="@+id/expirationDateValue"
+        style="@style/TextAppearance.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expirationDateLabel"
+        tools:text="10/10/2017" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/promotionCodeTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/expirationDateValue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/promotionCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_promotion_code"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/promotionCodeApplyButton"
+        style="@style/Widget.MaterialComponents.Button"
+        app:backgroundTint="@color/colorBlue500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/license_promotion_code_apply"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/promotionCodeTextLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/exportBackupButton"
+        style="@style/Widget.MaterialComponents.Button"
+        app:backgroundTint="@color/colorDeepOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/export_backup"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/importBackupButton"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/importBackupButton"
+        style="@style/Widget.MaterialComponents.Button"
+        app:backgroundTint="@color/colorGreen500"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/import_backup"
+        android:textSize="16sp"
+        android:layout_marginBottom="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/pref_value_ticket_language_enabled"
+        android:summaryOff="@string/pref_ticket_language_summary_disabled"
+        android:summaryOn="@string/pref_ticket_language_summary_enabled"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:title="@string/pref_ticket_language_ticket_title" />
+</PreferenceScreen>

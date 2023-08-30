@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_debt_invoices"
+        android:title="@string/menu_action_debts_invoice_activity"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_debt_pay_all"
+        android:title="@string/menu_action_debts_pay_all"
+        android:orderInCategory="105"
+        app:showAsAction="never"/>
+</menu>

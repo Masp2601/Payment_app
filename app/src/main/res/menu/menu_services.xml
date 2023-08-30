@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.softmed.payment.ServicesActivity">
+    <item
+        android:id="@+id/serviceActionEdit"
+        android:orderInCategory="100"
+        android:title="@string/generic_action_edit"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/serviceActionDelete"
+        android:orderInCategory="101"
+        android:title="@string/generic_action_delete"
+        app:showAsAction="never" />
+</menu>

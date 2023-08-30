@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="8dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/serviceName"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/stringDiscount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Servicio" />
+
+    <TextView
+        android:id="@+id/stringAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/layout_service_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceName" />
+
+    <TextView
+        android:id="@+id/serviceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/stringAmount"
+        app:layout_constraintStart_toEndOf="@+id/stringAmount"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/stringPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/layout_service_price"
+        app:layout_constraintBaseline_toBaselineOf="@+id/servicePrice"
+        app:layout_constraintEnd_toStartOf="@+id/servicePrice" />
+
+    <com.softmed.payment.helpers.CurrencyTextView
+        android:id="@+id/servicePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1200" />
+
+    <TextView
+        android:id="@+id/stringIva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/layout_service_iva"
+        app:layout_constraintBaseline_toBaselineOf="@+id/serviceIva"
+        app:layout_constraintEnd_toStartOf="@+id/serviceIva" />
+
+    <TextView
+        android:id="@+id/serviceIva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceDiscount"
+        tools:text="19" />
+
+    <TextView
+        android:id="@+id/stringDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/layout_service_discount"
+        app:layout_constraintBaseline_toBaselineOf="@+id/serviceDiscount"
+        app:layout_constraintEnd_toStartOf="@+id/serviceDiscount" />
+
+    <TextView
+        android:id="@+id/serviceDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/servicePrice"
+        tools:text="5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/clienteName"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Cliente" />
+        <TextView
+            android:id="@+id/clientePhoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/clienteNitText"
+            android:text="@string/list_cliente_phone_number"/>
+        <TextView
+            android:id="@+id/clientePhoneValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/clientePhoneText"
+            app:layout_constraintLeft_toRightOf="@id/clientePhoneText"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="5dp"
+            tools:text="3214239412"/>
+        <TextView
+            android:id="@+id/clienteNitText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/list_cliente_nit"
+            app:layout_constraintTop_toBottomOf="@id/clienteName"
+            />
+        <TextView
+            android:id="@+id/clienteNitValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/clienteNitText"
+            app:layout_constraintLeft_toRightOf="@id/clienteNitText"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="15244168"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/purchaseOrderNumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_order_number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/purchaseOrderNumberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintLeft_toRightOf="@id/purchaseOrderNumberTitle"
+        app:layout_constraintBaseline_toBaselineOf="@id/purchaseOrderNumberTitle"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/purchaseProviderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_provider"
+        app:layout_constraintTop_toBottomOf="@id/purchaseOrderNumberTitle"
+        app:layout_constraintLeft_toLeftOf="@id/purchaseOrderNumberTitle"/>
+    <TextView
+        android:id="@+id/purchaseProviderValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintLeft_toRightOf="@id/purchaseProviderTitle"
+        app:layout_constraintBaseline_toBaselineOf="@id/purchaseProviderTitle"
+        tools:text="Provider CA"/>
+
+    <TextView
+        android:id="@+id/purchaseDateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_date"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintRight_toLeftOf="@id/purchaseDateValue"
+        app:layout_constraintBaseline_toBaselineOf="@id/purchaseOrderNumberTitle"/>
+    <TextView
+        android:id="@+id/purchaseDateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/purchaseDateTitle"
+        tools:text="2017.10.20"/>
+
+    <TextView
+        android:id="@+id/purchaseTotalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_total"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintRight_toLeftOf="@id/purchaseTotalValue"
+        app:layout_constraintBaseline_toBaselineOf="@id/purchaseProviderTitle"/>
+    <TextView
+        android:id="@+id/purchaseTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/purchaseTotalTitle"
+        tools:text="150000.0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.softmed.payment.BillsActivity">
+
+    <item
+        android:id="@+id/billsActionNullify"
+        android:orderInCategory="101"
+        android:title="@string/generic_action_bill_nullify"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/billsActionShowTicket"
+        android:orderInCategory="100"
+        android:title="@string/generic_action_show_bill"
+        app:showAsAction="never"
+        />
+</menu>

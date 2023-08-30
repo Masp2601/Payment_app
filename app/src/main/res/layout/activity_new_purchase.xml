@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="com.softmed.payment.NewPurchaseActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilOrderNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/progressBar">
+
+        <EditText
+            android:id="@+id/purchaseOrderNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/purchase_order_number"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilProvider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilOrderNumber">
+
+        <EditText
+            android:id="@+id/purchaseProvider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/purchase_provider"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilObservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilProvider">
+
+        <EditText
+            android:id="@+id/purchaseObservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/purchase_observation"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tilObservation">
+
+        <EditText
+            android:id="@+id/purchaseTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/purchase_total"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="@string/button_save"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

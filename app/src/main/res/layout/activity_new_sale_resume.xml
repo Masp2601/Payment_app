@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.softmed.payment.AddInvoiceItemsActivity"
+    android:id="@+id/newSaleItemView">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/clientTitle"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bills_client_name" />
+
+            <Button
+                android:id="@+id/btnSelectClient"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_sale_button_select"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clientTitle" />
+
+            <TextView
+                android:id="@+id/resumenClienteName"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/btnSelectClient"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btnSelectClient"
+                tools:text="Nelson Mata" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardResumeTotals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toTopOf="@id/bnvNewSaleOptions"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cardPayment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/resumenSubtotalText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_invoice_resume_subtotal"
+                android:textColor="@color/colorIndigo500"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/resumenSubtotalValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="end"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenSubtotalText"
+                app:layout_constraintLeft_toRightOf="@id/resumenSubtotalText"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="$250.000" />
+
+            <TextView
+                android:id="@+id/resumenIvaText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_invoice_resume_iva"
+                android:textColor="@color/colorIndigo500"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resumenSubtotalText" />
+
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/resumenIvaValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenIvaText"
+                app:layout_constraintLeft_toLeftOf="@id/resumenSubtotalValue"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="$1.850" />
+
+            <TextView
+                android:id="@+id/resumenTotalText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_invoice_resume_total"
+                android:textColor="@color/colorIndigo500"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resumenIvaText" />
+
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/resumenTotalValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenTotalText"
+                app:layout_constraintLeft_toLeftOf="@id/resumenSubtotalValue"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="$251.850" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPayment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardResumeTotals"
+        app:layout_constraintBottom_toTopOf="@id/bnvNewSaleOptions"
+        app:layout_constraintLeft_toRightOf="@id/cardResumeTotals"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cardResumeTotals">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/resumenPayMethodText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_invoice_pay_method"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/resumenPayMethodValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="end"
+                app:layout_constraintLeft_toRightOf="@id/resumenPayMethodText"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="Efectivo" />
+
+            <!-- Pagos en efectivo -->
+            <TextView
+                android:id="@+id/resumenPayCashText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_invoice_method_cash"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/resumenPayMethodText"
+                app:layout_constraintTop_toBottomOf="@id/resumenPayMethodText" />
+
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/resumenPayCashValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="end"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenPayCashText"
+                app:layout_constraintLeft_toRightOf="@id/resumenPayCashText"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="$300.000" />
+
+            <TextView
+                android:id="@+id/resumenChange"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_invoice_change"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="@id/resumenPayMethodText"
+                app:layout_constraintTop_toBottomOf="@id/resumenPayCashText" />
+
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/resumenChangeValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="end"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenChange"
+                app:layout_constraintLeft_toRightOf="@id/resumenChange"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="$48.150" />
+
+            <!-- Pagos con tarjeta-->
+            <TextView
+                android:id="@+id/resumenCardReferenceText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_invoice_card_reference"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/resumenPayMethodText"
+                app:layout_constraintTop_toBottomOf="@id/resumenPayMethodText" />
+
+            <TextView
+                android:id="@+id/resumenCardReferenceValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenCardReferenceText"
+                app:layout_constraintLeft_toRightOf="@id/resumenCardReferenceText"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="452125452" />
+
+            <!-- Pagos con cheque-->
+            <TextView
+                android:id="@+id/resumenCheckNumberText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_invoice_check_number"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/resumenPayMethodText"
+                app:layout_constraintTop_toBottomOf="@id/resumenPayMethodText" />
+
+            <TextView
+                android:id="@+id/resumenCheckNumberValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenCheckNumberText"
+                app:layout_constraintLeft_toRightOf="@id/resumenCheckNumberText"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="23652145214" />
+
+            <TextView
+                android:id="@+id/resumenCheckBankNameText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/new_invoice_check_bank_name"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/resumenCheckNumberText"
+                app:layout_constraintTop_toBottomOf="@id/resumenCheckNumberText" />
+
+            <TextView
+                android:id="@+id/resumenCheckBankNameValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenCheckBankNameText"
+                app:layout_constraintLeft_toRightOf="@id/resumenCheckBankNameText"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="Santander" />
+
+            <!-- Pagos a crédito-->
+            <TextView
+                android:id="@+id/resumenCreditDepositText"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/payment_credit_deposit"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/resumenPayMethodText"
+                app:layout_constraintTop_toBottomOf="@id/resumenPayMethodText" />
+
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/resumenCreditDepositValue"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@id/resumenCreditDepositText"
+                app:layout_constraintLeft_toRightOf="@id/resumenCreditDepositText"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="$25.000" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnvNewSaleOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_new_sale_resume" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardResumeTotals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardClient">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNewSaleItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

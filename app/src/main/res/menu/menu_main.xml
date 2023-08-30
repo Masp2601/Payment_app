@@ -1,0 +1,55 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.softmed.payment.MainActivity">
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        android:title="@string/action_home"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_new_invoice"
+        android:orderInCategory="101"
+        android:title="@string/action_new_invoice"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_bills"
+        android:orderInCategory="102"
+        android:title="@string/action_bills"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_services"
+        android:orderInCategory="103"
+        android:title="@string/action_services"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_clientes"
+        android:orderInCategory="104"
+        android:title="@string/action_clientes"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_client_debts"
+        android:orderInCategory="105"
+        android:title="@string/action_client_debts"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_report"
+        android:orderInCategory="106"
+        android:title="@string/action_reports"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_license"
+        android:orderInCategory="110"
+        android:title="@string/action_license"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_whats_new"
+        android:orderInCategory="111"
+        android:title="@string/action_whats_new"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="120"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

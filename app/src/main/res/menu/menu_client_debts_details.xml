@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_debt_show_invoice_detail"
+        android:title="@string/menu_action_debts_show_invoice_detail"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_debt_pay_all"
+        android:title="@string/menu_action_client_debts_detail_pay_all"
+        android:orderInCategory="101"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_debt_pay"
+        android:title="@string/menu_action_client_debts_detail_pay"
+        android:orderInCategory="105"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sheet_payments">Payments</string>
+    <string name="cell_title_bill_number">Ticket #</string>
+    <string name="cell_title_bill_date">Date</string>
+    <string name="cell_title_bill_total">Total</string>
+    <string name="cell_title_bill_method_payment">Payment method</string>
+    <string name="cell_title_bill_reference_number">Reference</string>
+    <string name="cell_title_bill_client_name">Client</string>
+    <string name="cell_title_bill_subtotal">Subtotal</string>
+    <string name="cell_title_bill_iva">Sales tax</string>
+
+    <!-- Cell titles Expensehase Report -->
+    <string name="cell_title_purchase_order_number">Order #</string>
+    <string name="cell_title_purchase_provider_name">Provider</string>
+    <string name="cell_title_purchase_date">Date</string>
+    <string name="cell_title_purchase_total_paid">Total paid</string>
+    <string name="cell_title_purchase_observation">Observation</string>
+
+    <!-- Cell title for Clients Report -->
+    <string name="clients_sheet_name">Client</string>
+    <string name="cell_title_client_name">Name</string>
+    <string name="cell_title_client_lastname">Last name</string>
+    <string name="cell_title_client_nit">Id</string>
+    <string name="cell_title_client_email">Email</string>
+    <string name="cell_title_client_phone_number">Phone number</string>
+    <string name="cell_title_client_direction">Direction</string>
+
+    <!-- Cell title for Service Report -->
+    <string name="service_sheet_name">Products and services</string>
+    <string name="cell_title_service_name">Name</string>
+    <string name="cell_title_service_description">Description</string>
+    <string name="cell_title_service_price">Price</string>
+    <string name="cell_title_service_iva">Sales taxes</string>
+    <string name="cell_title_service_discount">Discount</string>
+
+    <!-- Cell title for Sales Report-->
+    <string name="sales_sheet_name">Sales</string>
+    <string name="cell_title_sales_bill_number">Ticket #</string>
+    <string name="cell_title_sales_client_name">Client</string>
+    <string name="cell_title_sales_subtotal">Subtotal</string>
+    <string name="cell_title_sales_iva">Sales taxes</string>
+    <string name="cell_title_sales_discount">Discount</string>
+    <string name="cell_title_sales_total">Total</string>
+    <string name="cell_title_sales_date">Date</string>
+    <string name="cell_title_sales_nullify">Canceled</string>
+    <string name="cell_title_payment_method">Payment method</string>
+    <string name="cell_title_payment_reference_number">Reference number</string>
+
+    <!-- Cell title for Sales Item Report -->
+    <string name="bill_items_sheet_name">Items</string>
+    <string name="cell_title_bill_item_name">Name</string>
+    <string name="cell_title_bill_item_price">Price</string>
+    <string name="cell_title_bill_item_iva">Sales tax(%)</string>
+    <string name="cell_title_bill_item_discount">Discount (%)</string>
+    <string name="cell_title_bill_item_amount">Amount</string>
+
+    <!-- Cell title Expenses  Report -->
+    <string name="expenses_sheet_name">Expenses</string>
+    <string name="cell_title_expenses_order_number">Order #</string>
+    <string name="cell_title_expenses_provider">Provider</string>
+    <string name="cell_title_expenses_observation">Observation</string>
+    <string name="cell_title_expenses_total_order">Total paid</string>
+    <string name="cell_title_expenses_date">Date</string>
+
+    <!-- Cell titles for ResumeItemsSold Report -->
+    <string name="resume_items_sold_sheet_name">Resume</string>
+    <string name="cell_title_resume_items_sold_name">Product</string>
+    <string name="cell_title_resume_items_sold_amount">Amount</string>
+    <string name="cell_title_resume_items_sold_total_iva">Total taxes</string>
+    <string name="cell_title_resume_items_sold_total_discount">Discount total</string>
+    <string name="cell_title_resume_items_sold_total_paid">Total</string>
+</resources>

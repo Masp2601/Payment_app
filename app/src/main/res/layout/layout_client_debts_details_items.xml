@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    cardView:cardCornerRadius="4dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Toolbar>
+
+        <TextView
+            android:id="@+id/debtsDetailInvoiceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            tools:text="000125"/>
+        <TextView
+            android:id="@+id/debtsDetailInvoiceDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBaseline_toBaselineOf="@id/debtsDetailInvoiceNumber"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="60dp"
+            tools:text="19.12.2017" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/debtsDetailInvoiceNumber"
+            android:layout_marginTop="10dp"
+            android:rowCount="4"
+            android:columnCount="2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/debts_detail_total_invoice"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginEnd="20dp"/>
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/debtsDetailTotalInvoice"
+                tools:text="$350.000"
+                android:layout_row="0"
+                android:layout_column="1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/debts_detail_total_paid"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginEnd="20dp"/>
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/debtsDetailTotalPaid"
+                tools:text="$100.000"
+                android:layout_row="1"
+                android:layout_column="1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/debts_detail_total_in_credit"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginEnd="20dp"/>
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/debtsDetailTotalInCredit"
+                tools:text="$250.000"
+                android:layout_row="2"
+                android:layout_column="1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/debts_detail_total_payment"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_marginEnd="20dp"/>
+            <com.softmed.payment.helpers.CurrencyTextView
+                android:id="@+id/debtsDetailTotalPayment"
+                tools:text="$250.000"
+                android:layout_row="3"
+                android:layout_column="1"/>
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

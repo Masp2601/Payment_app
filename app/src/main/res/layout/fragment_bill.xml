@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.softmed.payment.ShowBillFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="320dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/fragBasicData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/companyName"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="Nelson Mata" />
+
+            <TextView
+                android:id="@+id/companyNIT"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="15.244.168" />
+
+            <TextView
+                android:id="@+id/companyDirection"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="Calle 6AN #1AE-23. Barrio Ceiba 2. Cucutá." />
+
+            <TextView
+                android:id="@+id/companyPhone"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="(321) 423 9412" />
+
+            <TextView
+                android:id="@+id/companyEmail"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="njmata@gmail.com"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ticketText"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/bill_ticket"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragBasicData" />
+
+        <GridLayout
+            android:id="@+id/invoiceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:columnCount="2"
+            android:rowCount="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticketText">
+
+            <TextView
+                android:id="@+id/billTicketNumberText"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="@string/bill_ticket_bill_number" />
+
+            <TextView
+                android:id="@+id/billInvoiceNumber"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginStart="12dp"
+                android:layout_row="0"
+                tools:text="0000000001" />
+
+            <TextView
+                android:id="@+id/billTicketDateText"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="@string/bill_ticket_bill_date" />
+
+            <TextView
+                android:id="@+id/ticketDate"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginStart="12dp"
+                android:layout_row="1"
+                tools:text="2017.10.05" />
+
+            <TextView
+                android:id="@+id/billTicketClientNameText"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:text="@string/bills_client_name" />
+
+            <TextView
+                android:id="@+id/clientName"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginStart="12dp"
+                android:layout_row="2"
+                tools:text="Nelson Mata" />
+
+            <TextView
+                android:id="@+id/billTicketIdText"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:text="@string/bill_ticket_client_nit" />
+
+            <TextView
+                android:id="@+id/clientNit"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginStart="12dp"
+                android:layout_row="3"
+                tools:text="15.244.168" />
+
+            <TextView
+                android:id="@+id/billTicketPhoneText"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:text="@string/bill_ticket_client_phone" />
+
+            <TextView
+                android:id="@+id/clientPhone"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginStart="12dp"
+                android:layout_row="4"
+                tools:text="(321) 423 9412" />
+        </GridLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragItems"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/invoiceInfo">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNewSaleItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragPaymentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragItems">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fragPaymentInfoTotales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragPaymentInfoPayment">
+
+                <TextView
+                    android:id="@+id/totalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/bills_invoice_total"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivaText" />
+
+                <com.softmed.payment.helpers.CurrencyTextView
+                    android:id="@+id/billTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="end"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBaseline_toBaselineOf="@id/totalText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/totalText"
+                    tools:text="$10.000" />
+
+                <TextView
+                    android:id="@+id/ivaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/new_invoice_resume_iva"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtotalText" />
+
+                <com.softmed.payment.helpers.CurrencyTextView
+                    android:id="@+id/billIva"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:gravity="end"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBaseline_toBaselineOf="@id/ivaText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/billSubTotal"
+                    app:layout_constraintStart_toEndOf="@+id/ivaText"
+                    tools:text="$1.596" />
+
+                <TextView
+                    android:id="@+id/subtotalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/new_invoice_resume_subtotal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.softmed.payment.helpers.CurrencyTextView
+                    android:id="@+id/billSubTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:gravity="end"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBaseline_toBaselineOf="@id/subtotalText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/subtotalText"
+                    app:layout_constraintStart_toEndOf="@+id/subtotalText"
+                    tools:text="$8.404" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fragPaymentInfoPayment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fragPaymentInfoTotales"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/paymentMethodText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/new_invoice_pay_method"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/billPayMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:gravity="end"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paymentMethodText"
+                    app:layout_constraintBaseline_toBaselineOf="@id/paymentMethodText"
+                    tools:text="Efectivo" />
+
+                <!-- Pago en efectivo-->
+
+                <TextView
+                    android:id="@+id/paymentCashText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/new_invoice_method_cash"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/paymentMethodText" />
+
+                <com.softmed.payment.helpers.CurrencyTextView
+                    android:id="@+id/billCash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBaseline_toBaselineOf="@id/paymentCashText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paymentCashText"
+                    tools:text="$10.000" />
+
+                <TextView
+                    android:id="@+id/paymentChangeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/new_invoice_change"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/paymentCashText" />
+
+                <com.softmed.payment.helpers.CurrencyTextView
+                    android:id="@+id/billChange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    app:layout_constraintBaseline_toBaselineOf="@id/paymentChangeText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paymentChangeText"
+                    tools:text="$0" />
+
+                <!-- Pago con tarjeta-->
+
+                <TextView
+                    android:id="@+id/paymentReferenceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/new_invoice_card_reference"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/paymentMethodText" />
+
+                <TextView
+                    android:id="@+id/billCardReference"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:visibility="gone"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    app:layout_constraintBaseline_toBaselineOf="@id/paymentReferenceText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/paymentReferenceText"
+                    tools:text="124522345800" />
+
+                <!-- Pago con cheque-->
+
+                <TextView
+                    android:id="@+id/paymentCheckNumberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/payment_check_number"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/paymentMethodText" />
+
+                <TextView
+                    android:id="@+id/paymentCheckNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    app:layout_constraintBaseline_toBaselineOf="@id/paymentCheckNumberText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/paymentCheckNumberText"
+                    tools:text="25632125" />
+
+                <TextView
+                    android:id="@+id/paymentCheckBankNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/payment_check_bank_name"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/paymentCheckNumberText" />
+
+                <TextView
+                    android:id="@+id/paymentCheckBankName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    app:layout_constraintBaseline_toBaselineOf="@id/paymentCheckBankNameText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paymentCheckBankNameText"
+                    tools:text="Santander" />
+
+                <!-- Pago a crédito-->
+
+                <TextView
+                    android:id="@+id/paymentCreditDepositText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@string/payment_credit_deposit"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/paymentMethodText" />
+
+                <com.softmed.payment.helpers.CurrencyTextView
+                    android:id="@+id/paymentCreditDeposit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    app:layout_constraintBaseline_toBaselineOf="@id/paymentCreditDepositText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paymentCreditDepositText"
+                    tools:text="$10.000" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnSendTicketFile"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/colorIndigo300"
+            android:text="@string/bills_ticket_send_file"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragPaymentInfo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

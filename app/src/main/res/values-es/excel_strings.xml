@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sheet_payments">Pagos</string>
+    <string name="cell_title_bill_number"># de Ticket</string>
+    <string name="cell_title_bill_date">Fecha</string>
+    <string name="cell_title_bill_total">Total</string>
+    <string name="cell_title_bill_method_payment">Método de pago</string>
+    <string name="cell_title_bill_reference_number">Referencia</string>
+    <string name="cell_title_bill_client_name">Cliente</string>
+    <string name="cell_title_bill_subtotal">Subtotal</string>
+    <string name="cell_title_bill_iva">Iva</string>
+
+    <!-- Cell titles Expensehase Report -->
+    <string name="cell_title_purchase_order_number"># de Orden</string>
+    <string name="cell_title_purchase_provider_name">Proveedor</string>
+    <string name="cell_title_purchase_date">Fecha</string>
+    <string name="cell_title_purchase_total_paid">Total pagado</string>
+    <string name="cell_title_purchase_observation">Observación</string>
+
+    <!-- Cell title for Clients Report -->
+    <string name="clients_sheet_name">Clientes</string>
+    <string name="cell_title_client_name">Nombre</string>
+    <string name="cell_title_client_lastname">Apellido</string>
+    <string name="cell_title_client_nit">Cédula o Nit</string>
+    <string name="cell_title_client_email">Email</string>
+    <string name="cell_title_client_phone_number">Teléfono</string>
+    <string name="cell_title_client_direction">Dirección</string>
+
+    <!-- Cell title for Service Report -->
+    <string name="service_sheet_name">Productos y servicios</string>
+    <string name="cell_title_service_name">Nombre</string>
+    <string name="cell_title_service_description">Descripción</string>
+    <string name="cell_title_service_price">Precio</string>
+    <string name="cell_title_service_iva">Iva</string>
+    <string name="cell_title_service_discount">Descuento</string>
+
+    <!-- Cell title for Sales Report-->
+    <string name="sales_sheet_name">Ventas</string>
+    <string name="cell_title_sales_bill_number">Ticket #</string>
+    <string name="cell_title_sales_client_name">Cliente</string>
+    <string name="cell_title_sales_subtotal">Subtotal</string>
+    <string name="cell_title_sales_iva">Iva</string>
+    <string name="cell_title_sales_discount">Descuento</string>
+    <string name="cell_title_sales_total">Total</string>
+    <string name="cell_title_sales_date">Fecha</string>
+    <string name="cell_title_sales_nullify">Anulado</string>
+    <string name="cell_title_payment_method">Método de pago</string>
+    <string name="cell_title_payment_reference_number">Número de referencia</string>
+
+    <!-- Cell title for Sales Item Report -->
+    <string name="bill_items_sheet_name">Items</string>
+    <string name="cell_title_bill_item_name">Nombre</string>
+    <string name="cell_title_bill_item_price">Precio</string>
+    <string name="cell_title_bill_item_iva">Iva(%)</string>
+    <string name="cell_title_bill_item_discount">Descuento(%)</string>
+    <string name="cell_title_bill_item_amount">Cantidad</string>
+
+    <!-- Cell title Expenses  Report -->
+    <string name="expenses_sheet_name">Gastos</string>
+    <string name="cell_title_expenses_order_number">Order #</string>
+    <string name="cell_title_expenses_provider">Proveedor</string>
+    <string name="cell_title_expenses_observation">Observación</string>
+    <string name="cell_title_expenses_total_order">Total pagado</string>
+    <string name="cell_title_expenses_date">Fecha</string>
+
+    <!-- Cell titles for ResumeItemsSold Report -->
+    <string name="resume_items_sold_sheet_name">Resumen</string>
+    <string name="cell_title_resume_items_sold_name">Producto</string>
+    <string name="cell_title_resume_items_sold_amount">Cantidad</string>
+    <string name="cell_title_resume_items_sold_total_iva">Total del Iva Calculado</string>
+    <string name="cell_title_resume_items_sold_total_discount">Total en descuentos</string>
+    <string name="cell_title_resume_items_sold_total_paid">Total en Ventas</string>
+</resources>

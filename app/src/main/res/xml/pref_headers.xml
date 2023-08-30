@@ -1,0 +1,24 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.softmed.payment.SettingsActivity$CurrencyPreferenceFragment"
+        android:icon="@drawable/ic_monetization_on_black_24dp"
+        android:title="@string/pref_header_currency"/>
+
+    <header
+        android:fragment="com.softmed.payment.SettingsActivity$GeneralPreferenceFragment"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="@string/pref_header_general" />
+
+    <header
+        android:fragment="com.softmed.payment.SettingsActivity$BillsPreferenceFragment"
+        android:icon="@drawable/ic_description_black_24dp"
+        android:title="@string/pref_header_bills_number" />
+
+    <header
+        android:fragment="com.softmed.payment.SettingsActivity$LanguagePreferenceFragment"
+        android:icon="@drawable/ic_language_black_24dp"
+        android:title="@string/pref_language_title"/>
+</preference-headers>

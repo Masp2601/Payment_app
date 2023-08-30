@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.softmed.payment">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.softmed.payment.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ClientesActivity"
+            android:label="@string/title_activity_clientes"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ClienteEditActivity"
+            android:label="@string/activity_cliente_edit"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ClientesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ClientesActivity" />
+        </activity>
+        <activity
+            android:name=".ServicesActivity"
+            android:label="@string/title_activity_services"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ServicesEditActivity"
+            android:label="@string/activity_services_edit"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ServicesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesActivity" />
+        </activity>
+        <activity
+            android:name=".NewSaleActivity"
+            android:label="@string/title_activity_new_invoice"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddInvoiceItemsActivity"
+            android:label="@string/new_invoice_resume"
+            android:launchMode="singleTask"
+            android:parentActivityName=".NewSaleActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NewSaleActivity" />
+        </activity>
+        <activity
+            android:name=".SelectClientActivity"
+            android:label="@string/new_invoice_select_client_title" />
+        <activity
+            android:name=".BillsActivity"
+            android:label="@string/title_activity_bills"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BillEditActivity"
+            android:label="@string/title_edit_bill_activity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".BillsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BillsActivity" />
+        </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:label="@string/title_activity_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".reports.TransactionByDateReportActivity"
+            android:label="@string/report_name_today"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ReportActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ReportActivity" />
+        </activity>
+        <activity
+            android:name=".reports.BillsReportActivity"
+            android:label="@string/report_name_bills_general"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ReportActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ReportActivity" />
+        </activity>
+        <activity
+            android:name=".reports.PaymentsListActivity"
+            android:label="@string/report_today_details"
+            android:parentActivityName=".reports.TransactionByDateReportActivity" />
+        <activity
+            android:name=".reports.DetailsByActivity"
+            android:label="@string/report_name_filter_details_by"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ReportActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ReportActivity" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BasicDataActivity"
+            android:label="@string/title_activity_basic_data"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PurchaseActivity"
+            android:label="@string/title_activity_purchase"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".NewPurchaseActivity"
+            android:label="@string/title_activity_new_purchase"
+            android:launchMode="singleTask"
+            android:parentActivityName=".PurchaseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PurchaseActivity" />
+        </activity>
+        <activity
+            android:name=".reports.ExpenseReportActivity"
+            android:label="@string/report_name_purchases"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ReportActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ReportActivity" />
+        </activity>
+        <activity
+            android:name=".LicenseActivity"
+            android:label="@string/title_activity_license"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <service
+            android:name=".BirthdayService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".reports.DetailsByDayReportActivity"
+            android:label="@string/report_name_details_items_sold_by_date"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ReportActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ReportActivity" />
+        </activity>
+        <activity
+            android:name=".ClientDebtsActivity"
+            android:label="@string/title_activity_client_debts"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ClientDebtsDetailsActivity"
+            android:label="@string/title_activity_client_debts_details"
+            android:launchMode="singleTask"
+            android:parentActivityName=".ClientDebtsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ClientDebtsActivity" />
+        </activity>
+
+        <provider
+            android:authorities="${applicationId}.provider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

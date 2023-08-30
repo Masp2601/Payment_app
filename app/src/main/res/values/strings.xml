@@ -1,0 +1,394 @@
+<resources>
+    <string name="app_name">InvoiceApp</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_clientes">Clients</string>
+    <string name="action_services">Products and services</string>
+    <string name="action_new_invoice">Add sale</string>
+    <string name="action_bills">Sales</string>
+    <string name="action_home">Home</string>
+    <string name="action_reports">Reports</string>
+    <string name="action_purchase">Expenses</string>
+    <string name="action_license">License</string>
+    <string name="action_client_debts">Account Receivable</string>
+    <string name="action_whats_new">What\'s new</string>
+    <string name="button_save">Save</string>
+    <string name="file_saved_success">File saved successful</string>
+    <string name="file_saved_error">Error trying to save the file</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Generic Actions -->
+    <string name="generic_action_edit">Edit</string>
+    <string name="generic_action_delete">Delete</string>
+    <string name="generic_action_details">Details</string>
+    <string name="generic_action_bill_nullify">Nullify / Accept sale</string>
+    <string name="generic_action_show_bill">Show bill</string>
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">Basic Information</string>
+    <string name="pref_header_bills_number">Bills number</string>
+    <string name="pref_header_currency">Currency</string>
+
+    <string name="pref_title_display_name">Name</string>
+    <string name="pref_key_display_name" translatable="false">display_name_pref</string>
+    <string name="pref_default_display_name" translatable="false">""</string>
+
+    <string name="pref_title_nit">ID</string>
+    <string name="pref_key_nit" translatable="false">nit_pref</string>
+    <string name="pref_default_nit" translatable="false">""</string>
+
+    <string name="pref_title_direction">Address</string>
+    <string name="pref_key_direction" translatable="false">direction_pref</string>
+    <string name="pref_default_direction" translatable="false">""</string>
+
+    <string name="pref_title_telephone_number">Phone number</string>
+    <string name="pref_key_telephone_number" translatable="false">telephone_number_pref</string>
+    <string name="pref_default_telephone_number" translatable="false">""</string>
+
+    <string name="pref_title_email">Email</string>
+    <string name="pref_key_email" translatable="false">email_pref</string>
+    <string name="pref_default_email" translatable="false">""</string>
+
+    <string name="pref_title_bills_from">From:</string>
+    <string name="pref_key_bills_from" translatable="false">bills_from</string>
+    <string name="pref_default_bills_from" translatable="false">0</string>
+
+    <string name="pref_title_bills_to">To:</string>
+    <string name="pref_key_bills_to" translatable="false">bills_to</string>
+    <string name="pref_default_bills_to" translatable="false">0</string>
+
+    <string name="pref_title_resolution">Resolution</string>
+    <string name="pref_key_resolution" translatable="false">resolution</string>
+    <string name="pref_default_resolution" translatable="false">""</string>
+
+    <string name="pref_title_prefix_resolution">Prefix Resolution</string>
+    <string name="pref_key_prefix_resolution" translatable="false">prefix_resolucion</string>
+    <string name="pref_default_prefix_resolution" translatable="false">""</string>
+
+    <string name="pref_key_invoice_number" translatable="false">invoice_number</string>
+
+    <string name="pref_title_currency_digits">Number of decimal digits to show in the currency</string>
+    <string name="pref_key_currency_digits" translatable="false">key_currency_digits</string>
+    <string name="pref_default_currency_digits" translatable="false">"2"</string>
+
+    <string name="pref_title_country">Country</string>
+    <string name="pref_key_country" translatable="false">prefix_country</string>
+
+    <string name="pref_language_title">Language</string>
+    <string name="pref_ticket_language_ticket_title">Multiple languages on payment receipts</string>
+    <string name="pref_ticket_language_summary_enabled">Enabled</string>
+    <string name="pref_ticket_language_summary_disabled">Disabled</string>
+
+    <string name="pref_value_control_date" translatable="false">control_date_value</string>
+    <string name="pref_value_total_day" translatable="false">total_day_value</string>
+    <string name="pref_value_total_in_credit_day" translatable="false">total_in_credit_today</string>
+    <string name="pref_value_total_in_credit_deposit_day" translatable="false">total_in_credit_deposit_today</string>
+    <string name="pref_value_total_bills_day" translatable="false">total_bills_day</string>
+    <string name="pref_value_is_application_registered" translatable="false">is_application_registered</string>
+    <string name="pref_value_is_application_registered_test" translatable="false">is_application_registered_test</string>
+    <string name="pref_value_is_application_basic_data_backed_up" translatable="false">is_application_basic_data_backed_up</string>
+    <string name="pref_value_email_registered" translatable="false">email_registered</string>
+    <string name="pref_value_license_expiration_date" translatable="false">license_expiration_date</string>
+    <string name="pref_value_purchase_total_paid_day" translatable="false">purchase_total_paid_day</string>
+    <string name="pref_value_is_day_open" translatable="false">is_date_open</string>
+    <string name="pref_value_control_day_time" translatable="false">control_date_time</string>
+    <string name="pref_value_license_type_id" translatable="false">license_type_id</string>
+    <string name="pref_value_helper_total_clients" translatable="false">total_clients_helper</string>
+    <string name="pref_value_birthday_of_the_day" translatable="false">birthday_of_the_day</string>
+    <string name="pref_value_currency_digits" translatable="false">currency_digits_value</string>
+    <string name="pref_value_app_last_version" translatable="false">app_last_version</string>
+    <string name="pref_value_application_is_limited" translatable="false">application_is_limited</string>
+    <string name="pref_value_ticket_language_enabled" translatable="false">ticket_language_enabled</string>
+
+    <string name="title_activity_clientes">Clients</string>
+
+    <!-- String related to MainActivity -->
+    <string name="title_button_open_day">Open day</string>
+    <string name="title_button_close_day">Close day</string>
+    <string name="main_operation_date">Date</string>
+    <string name="main_bills_day_info">Day\'s sales</string>
+    <string name="main_bills_total_day">Total</string>
+    <string name="main_bills_grid_total_title">Total turnover</string>
+    <string name="main_bills_grid_total_in_credit">Total in credits</string>
+    <string name="main_bills_grid_total_day">Total in cash</string>
+    <string name="main_bills_grid_total_day_subhead">(payouts included)</string>
+    <string name="main_bills_grid_total_credit_deposit">Payouts</string>
+    <string name="main_operation_status_open">Operations: open</string>
+    <string name="main_operation_status_close">Operations: closed</string>
+    <string name="main_operation_on_close_day_alert_title">Are you sure you want to close the operation for today?</string>
+    <string name="main_operation_on_close_day_alert_message">Are you sure?</string>
+    <string name="alert_dialog_button_accept">Accept</string>
+    <string name="alert_dialog_button_cancel">Cancel</string>
+    <string name="main_clients_birthday_title">Birthday Clients</string>
+    <string name="main_button_new_sale">Add sale</string>
+    <string name="main_button_closed_day_title_alert">Closed day</string>
+    <string name="main_button_closed_day_new_sale_alert">The operations are closed. Do you want to open the day?</string>
+
+    <!-- String related to Clientes -->
+    <string name="activity_cliente_edit">Client</string>
+    <string name="client_name">Name(s)</string>
+    <string name="cliente_last_name">Last name(s)</string>
+    <string name="cliente_nit">Id</string>
+    <string name="cliente_email">Email</string>
+    <string name="cliente_phone">Phone number</string>
+    <string name="cliente_address">Address</string>
+    <string name="cliente_fullname">%1$s %2$s</string>
+    <string name="cliente_birthday">Date of Birthday</string>
+    <string name="list_cliente_phone_number">Phone number:</string>
+    <string name="list_cliente_nit">Id:</string>
+    <string name="cliente_remove_alert_title">Delete Client?</string>
+    <string name="cliente_remove_alert_message">Are you sure you want to delete %1$s %2$s?</string>
+    <string name="cliente_remove_alert_positive_button">Yes</string>
+    <string name="cliente_remove_alert_negative_button">No</string>
+    <string name="cliente_remove_error_has_debt_message">The client could not be removed because he has unpaid bills.</string>
+
+    <!-- String related to Services -->
+    <string name="activity_services_edit">Products and services</string>
+    <string name="layout_service_price">Price:</string>
+    <string name="layout_service_iva">Sale Tax(%):</string>
+    <string name="layout_service_discount">Discount (%):</string>
+    <string name="layout_service_amount">Amount:</string>
+    <string name="title_activity_services">Products and services</string>
+    <string name="service_name">Name</string>
+    <string name="service_iva">Sale Tax (%)</string>
+    <string name="service_discount">Discount(%)</string>
+    <string name="service_price">Price</string>
+    <string name="service_amount">Amount</string>
+    <string name="title_activity_new_invoice">Add sale</string>
+
+    <!-- String related to New Invoice -->
+    <string name="new_sale_items_price">Price:</string>
+    <string name="new_sale_items_amount">Amount:</string>
+    <string name="new_sale_img_selected_description">Added</string>
+    <string name="new_sale_button_select">Select</string>
+    <string name="new_sale_button_amount">Amount</string>
+    <string name="new_sale_fragment_amount_input_hint">Amount</string>
+    <string name="button_next">Next</string>
+    <string name="add_service_is_null_or_empty">You must select a least one service.</string>
+    <string name="new_invoice_resume">Resume</string>
+    <string name="new_invoice_client_text">Client:</string>
+    <string name="new_invoice_client_select">Choose a client</string>
+    <string name="new_invoice_resume_total">Total:</string>
+    <string name="new_invoice_resume_subtotal">Subtotal:</string>
+    <string name="new_invoice_resume_iva">Sale Tax:</string>
+    <string name="new_invoice_update_item">Update</string>
+    <string name="new_invoice_cancel_item">Cancel</string>
+    <string name="new_invoice_select_client_title">Choose a client</string>
+    <string name="new_invoice_invoice_number_error">Error saving payment receipt. Ticket number is invalid.</string>
+    <string name="new_invoice_pay_under_total_error">Payment has not been completed. Check the total amount paid.</string>
+    <string name="new_invoice_credit_not_client_selected_error">You must select a client in order to process the credit.</string>
+    <string name="new_invoice_button_show_bill">Payment receipt</string>
+    <string name="new_invoice_button_pay">Pay</string>
+    <string name="new_invoice_button_finish">Finish</string>
+    <string name="new_invoice_pay_method">Payment method</string>
+    <string name="new_invoice_method_cash">Cash</string>
+    <string name="new_invoice_change">Change</string>
+    <string name="new_invoice_card_reference">Reference</string>
+    <string name="new_invoice_check_number">Number</string>
+    <string name="new_invoice_check_bank_name">Bank name</string>
+    <string name="new_invoice_credit_deposit">Credit payment</string>
+
+    <!-- String related to Bills -->
+    <string name="title_activity_bills">Sales</string>
+    <string name="title_edit_bill_activity">Details</string>
+    <string name="bills_invoice_number">Ticket #</string>
+    <string name="bills_client_name">Client</string>
+    <string name="bills_invoice_total">Total</string>
+    <string name="bills_invoice_nullify">Canceled</string>
+    <string name="bills_ticket_send_file">Send receipt</string>
+    <string name="bills_nullify_alert_message">Do you want to cancel the invoice %1$s?</string>
+    <string name="bills_validate_alert_message">Would you like to confirm that the invoice %1$s is valid?</string>
+    <string name="bills_filter_by">Filter by:</string>
+    <string name="bills_select_button">Select</string>
+    <string name="bills_filter_button">Filter</string>
+    <string name="bill_filter_client_title">Client</string>
+    <string-array name="bills_filter_array">
+        <item>Client</item>
+        <item>Sale date</item>
+    </string-array>
+    <string name="no_sales_text">Sales not found.</string>
+    <string name="bill_total_sales">Total sales</string>
+
+    <string name="title_new_service">Add Service</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="title_new_client">Add Client</string>
+    <string name="title_menu_search">Filter</string>
+
+    <!-- String related to Reports -->
+    <string name="title_activity_report">Reports</string>
+    <string name="report_title_since">From:</string>
+    <string name="report_title_end">To:</string>
+    <string name="report_name_today">Transaction Reports</string>
+    <string name="report_today_details">Transaction Details</string>
+    <string name="report_name_bills_general">Sales Reports</string>
+    <string name="report_name_filter_details_by">Report by filter</string>
+    <string name="report_name_purchases">Purchases Report</string>
+    <string name="report_name_details_items_sold_by_date">Item Sales Report</string>
+    <string-array name="report_list">
+        <item>Transaction Reports</item>
+        <item>Report by dates</item>
+        <item>Report by filter</item>
+        <item>Item Sales Report</item>
+        <!--<item>Reporte de gastos</item>-->
+        <item>Send clients list</item>
+        <item>Send Products and Services items</item>
+        <item>Send sales</item>
+        <!--<item>Enviar listado de gastos</item>-->
+    </string-array>
+    <string name="report_select_date">Select a date</string>
+    <string name="report_payment_cash">Cash</string>
+    <string name="report_payment_card">Card</string>
+    <string name="report_payment_check">Check</string>
+    <string name="report_payment_credit">Credit</string>
+    <string name="report_resume_total_day">Day\'s totals</string>
+    <string name="report_total_bills">Sales</string>
+    <string name="report_total_pay">Total</string>
+    <string name="report_total_in_credit">Credit</string>
+    <string name="report_total_credit_paid">Credit Payment</string>
+    <string name="report_total_items_sold">Items sold</string>
+    <string name="report_button_show_resume">Show resume</string>
+    <string name="report_button_show_bills">Get Resume</string>
+    <string name="report_bar_button_save">Save</string>
+    <string name="report_bar_button_send_file">Send</string>
+    <string name="report_filter_by">Filter by</string>
+    <string-array name="report_filter_by_items">
+        <item>Client</item>
+        <item>Service</item>
+    </string-array>
+    <string name="report_client_unregister">Unregister</string>
+
+    <string name="file_name_report_payments_day">transactions_%1$s.xls</string>
+    <string name="file_name_report_invoices_dates">sales_report_%1$s_%2$s.xls</string>
+    <string name="file_name_report_filter_by">filter_by_%1$s_dates_%2$s_%3$s.xls</string>
+    <string name="file_name_report_purchases_dates">purchases_report_%1$s_%2$s.xls</string>
+    <string name="file_name_all_clients_list">clients.xls</string>
+    <string name="file_name_all_services_list">products_and_services.xls</string>
+    <string name="file_name_all_bills_with_items">sales_with_items.xls</string>
+    <string name="file_name_all_expenses">expenses.xls</string>
+    <string name="file_name_all_items_sold_by_date">items_sold_%1$s_%2$s.xls</string>
+
+    <!-- String related to Ticket -->
+    <string name="bill_ticket">Ticket</string>
+    <string name="bill_ticket_client_nit">Id:</string>
+    <string name="bill_ticket_client_phone">Phone number:</string>
+    <string name="bill_ticket_bill_number">Ticket #: </string>
+    <string name="bill_ticket_bill_date">Date:</string>
+    <string name="bill_ticket_pdf_client_nit">Id: %1$s</string>
+    <string name="bill_ticket_pdf_client_phone">Phone number: %1$s</string>
+    <string name="bill_ticket_pdf_client_fullname">Name: %1$s %2$s</string>
+    <string name="bill_ticket_pdf_date">Date: %1$s</string>
+    <string name="bill_ticket_pdf_invoice_number">Ticket: %1$d</string>
+    <string name="bill_ticket_pdf_value">Price: %1$.2f</string>
+    <string name="bill_ticket_pdf_iva">Tax Sale(%%): %1$.2f</string>
+    <string name="bill_ticket_pdf_discount">Discount(%%): %1$.2f</string>
+    <string name="bill_ticket_pdf_amount">Amount: %1$f</string>
+    <string name="bill_ticket_pdf_subtotal">Subtotal: %1$.2f</string>
+    <string name="bill_ticket_pdf_iva_total">Tax Sale: %1$.2f</string>
+    <string name="bill_ticket_pdf_total_bill">Total: %1$.2f</string>
+    <string name="bill_ticket_pdf_payment_method">Payment method: %1$s</string>
+    <string name="bill_ticket_pdf_cash_total">Cash: %1$.2f</string>
+    <string name="bill_ticket_pdf_change_total">Change: %1$.2f</string>
+    <string name="bill_ticket_pdf_reference_number">Reference number: %1$s</string>
+
+    <!-- String related to Payments -->
+    <string name="payment_title">Payment</string>
+    <string name="payment_total">Total:</string>
+    <string name="payment_method_type">Payment method:</string>
+    <string name="payment_cash">Cash:</string>
+    <string name="payment_return">Change:</string>
+    <string name="payment_approve_reference">Reference number:</string>
+    <string name="payment_credit_deposit">Credit Payment:</string>
+    <string name="payment_method_cash">Cash</string>
+    <string name="payment_method_card">Card</string>
+    <string name="payment_method_credit">Credit</string>
+    <string name="payment_method_check">Check</string>
+    <string name="payment_check_number">Check #:</string>
+    <string name="payment_check_bank_name">Bank:</string>
+    <string name="payment_cash_invalid_value_error">Invalid Amount</string>
+    <string name="payment_card_reference_number_empty_error">Reference number is required</string>
+    <string name="payment_check_number_empty_error">Check number is required</string>
+    <string name="payment_check_bank_name_empty_error">Bank name is required</string>
+    <string-array name="payment_methods_array">
+        <item>Cash</item>
+        <item>Card</item>
+        <item>Check</item>
+        <item>Credit</item>
+    </string-array>
+    <string name="title_activity_login">Register</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_promotion_code">Promotional Code</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Log in</string>
+    <string name="error_invalid_email">Invalid email</string>
+    <string name="error_incorrect_email">Email is not registered</string>
+    <string name="error_invalid_password">Password too short</string>
+    <string name="error_incorrect_password">Password invalid</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_field_must_be_number">Must be a number</string>
+    <string name="permission_rationale">The permission for the contacts is required to provide autocompletion information</string>
+    <string name="error_day_is_closed_message">Cannot perform operations while the day is closed</string>
+    <string name="error_invoice_number_maxed">The numbering provided has reached the limit. Go to settings to increase the maximum value.</string>
+    <string name="error_request_timeout">Couldn\'t connect to the server. Check your Internet connection.</string>
+    <string name="error_day_to_open_is_invalid">The date is invalid. Check your device\'s date. </string>
+    <string name="error_report_license_check">Error verifying your license. Check your Internet connection.</string>
+    <string name="error_no_internet_connection">No Internet connection could be detected. Check your connection.</string>
+
+    <string name="title_activity_basic_data">Basic Information</string>
+
+    <!-- String relate to expenses activity -->
+    <string name="title_activity_purchase">Purchases</string>
+    <string name="title_activity_new_purchase">Add purchase</string>
+    <string name="purchase_order_number">Number order:</string>
+    <string name="purchase_provider">Provider:</string>
+    <string name="purchase_date">Date:</string>
+    <string name="purchase_total">Total:</string>
+    <string name="purchase_observation">Observation:</string>
+    <string name="main_purchase_total_paid_day">Total paid in purchases:</string>
+
+    <!-- Licenses Activity-->
+    <string name="title_activity_license">License</string>
+    <string name="license_expiration_date">Expiration date</string>
+    <string name="license_type">License type</string>
+    <string name="license_promotion_code_apply">Apply Promotional Code</string>
+    <string name="license_promotion_code_success">Promotional Code Applied. Your license has been updated</string>
+    <string name="license_promotion_code_denied">Promotional Code is no longer valid.</string>
+    <string name="export_backup">Export Backup</string>
+    <string name="import_backup">Import Backup</string>
+    <string name="export_backup_success">The backup file has been created</string>
+    <string name="import_backup_success">The file has been restored</string>
+
+    <!-- String relate to Clients Receivable Activity -->
+    <string name="title_activity_client_debts">Accounts Receivable</string>
+    <string name="title_activity_client_debts_details">Receivable details</string>
+    <string name="debts_total_invoices">Pending Receivable</string>
+    <string name="debts_total_in_debts">Receivable total</string>
+    <string name="debts_total_paid">Total Receivable paid</string>
+    <string name="debts_pay_all_message">Are you want to cancel the Receivable of %1$s?</string>
+    <string name="debts_detail_total_invoice">Total invoice:</string>
+    <string name="debts_detail_total_paid">Total Receivable paid:</string>
+    <string name="debts_detail_total_in_credit">Total in credits:</string>
+    <string name="debts_detail_total_payment">Total payment:</string>
+    <string name="debts_client_detail_total_payment">Receivable Total:</string>
+    <string name="debts_client_detail_button_pay">Pay total</string>
+    <string name="debts_client_detail_button_save">Save</string>
+    <string name="debts_client_detail_fragment_payment_title">Partial Pay</string>
+    <string name="debts_client_detail_invoice_payment">Amount:</string>
+    <string name="debts_client_detail_invalid_payment_error">Invalid Amount</string>
+    <string name="menu_action_debts_invoice_activity">Show tickets</string>
+    <string name="menu_action_debts_pay_all">Pay all</string>
+    <string name="menu_action_debts_show_invoice_detail">Show detail</string>
+    <string name="menu_action_client_debts_detail_pay_all">Pay all</string>
+    <string name="menu_action_client_debts_detail_pay">Pay</string>
+
+
+    <string-array name="pref_supported_language_labels">
+        <item>English</item>
+        <item>Spanish</item>
+    </string-array>
+
+    <string name="title_choose_supported_language">Choose a Language to display the ticket</string>
+</resources>

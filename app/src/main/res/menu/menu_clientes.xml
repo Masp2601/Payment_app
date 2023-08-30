@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/clienteActionDetails"
+        android:orderInCategory="100"
+        android:title="@string/generic_action_details"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/clienteActionEdit"
+        android:orderInCategory="100"
+        android:title="@string/generic_action_edit"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/clienteActionDelete"
+        android:orderInCategory="101"
+        android:title="@string/generic_action_delete"
+        app:showAsAction="never"/>
+</menu>
