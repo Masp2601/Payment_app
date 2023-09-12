@@ -84,7 +84,7 @@ class PdfHelper(private val ctx: Context) : AnkoLogger {
         val billNumber = resource.getString(R.string.bill_ticket_pdf_invoice_number, payment.invoiceNumber)
         canvas.drawText(billNumber, MARGIN_LEFT, newLinePosition(20f), paint)
 
-        writeItemsOnCanvas(canvas, items, resource)
+        writeItemsOnCanvas(canvas, items, resource, payment)
         writePaymentOnCanvas(canvas, payment, subtotal, iva, total, resource)
         document.finishPage(page)
 
@@ -115,14 +115,14 @@ class PdfHelper(private val ctx: Context) : AnkoLogger {
 
     }
 
-    private fun writeItemsOnCanvas(canvas: Canvas, items: List<InvoiceItemsContract.InvoiceItems>, resource: Resources) {
+    private fun writeItemsOnCanvas(canvas: Canvas, items: List<InvoiceItemsContract.InvoiceItems>, resource: Resources,payment: TransactionContract.Transaction) {
         val paint = Paint()
         val leftWidth = 150
         val leftSide = MARGIN_LEFT
         val rightSide = canvas.width - MARGIN_RIGHT - leftWidth
 
         for (i in items.indices){
-            var positionY = newLinePosition(20f)
+            var positionY = newLinePosition(10f)
             canvas.drawText(items[i].itemName, leftSide, positionY, paint)
             val value = resource.getString(R.string.bill_ticket_pdf_value, items[i].itemPrice)
             canvas.drawText(value, rightSide, positionY, paint)
@@ -138,6 +138,10 @@ class PdfHelper(private val ctx: Context) : AnkoLogger {
             positionY = newLinePosition()
             val amount = resource.getString(R.string.bill_ticket_pdf_amount, items[i].itemAmount)
             canvas.drawText(amount, rightSide, positionY, paint)
+
+            positionY = newLinePosition()
+            val pass = resource.getString(R.string.bill_credit_deposit, (payment.paymentCreditDeposit))
+            canvas.drawText(pass, rightSide, positionY, paint)
         }
     }
 

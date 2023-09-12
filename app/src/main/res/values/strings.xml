@@ -288,6 +288,7 @@
     <string name="bill_ticket_pdf_total_bill">Total: %1$.2f</string>
     <string name="bill_ticket_pdf_payment_method">Payment method: %1$s</string>
     <string name="bill_ticket_pdf_cash_total">Cash: %1$.2f</string>
+    <string name="bill_credit_deposit">Credit Payment: %1$.2f</string>
     <string name="bill_ticket_pdf_change_total">Change: %1$.2f</string>
     <string name="bill_ticket_pdf_reference_number">Reference number: %1$s</string>
 
