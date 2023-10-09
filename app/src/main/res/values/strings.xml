@@ -12,6 +12,7 @@
     <string name="action_license">License</string>
     <string name="action_client_debts">Account Receivable</string>
     <string name="action_whats_new">What\'s new</string>
+    <string name="action_image">Add logo</string>
     <string name="button_save">Save</string>
     <string name="file_saved_success">File saved successful</string>
     <string name="file_saved_error">Error trying to save the file</string>

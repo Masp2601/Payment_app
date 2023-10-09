@@ -12,6 +12,7 @@
     <string name="action_license">Licencia</string>
     <string name="action_client_debts">Cuentas por Cobrar</string>
     <string name="action_whats_new">Novedades</string>
+    <string name="action_image">Agregar logo</string>
     <string name="button_save">Guardar</string>
     <string name="file_saved_success">Archivo guardado correctamente</string>
     <string name="file_saved_error">Error guardando el archivo</string>
