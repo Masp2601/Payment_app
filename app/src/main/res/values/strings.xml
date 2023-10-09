@@ -282,7 +282,7 @@
     <string name="bill_ticket_pdf_value">Price: %1$.2f</string>
     <string name="bill_ticket_pdf_iva">Tax Sale(%%): %1$.2f</string>
     <string name="bill_ticket_pdf_discount">Discount(%%): %1$.2f</string>
-    <string name="bill_ticket_pdf_amount">Amount: %1$f</string>
+    <string name="bill_ticket_pdf_amount">Amount: %1$.2f</string>
     <string name="bill_ticket_pdf_subtotal">Subtotal: %1$.2f</string>
     <string name="bill_ticket_pdf_iva_total">Tax Sale: %1$.2f</string>
     <string name="bill_ticket_pdf_total_bill">Total: %1$.2f</string>

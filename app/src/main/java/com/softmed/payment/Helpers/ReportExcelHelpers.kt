@@ -206,7 +206,7 @@ class ReportExcelHelpers(val ctx: Context) : AnkoLogger {
                 row.createCell(2).setCellValue(clients[i].nit)
                 row.createCell(3).setCellValue(clients[i].email)
                 row.createCell(4).setCellValue(clients[i].phoneNumber)
-                row.createCell(4).setCellValue(clients[i].direction)
+                row.createCell(5).setCellValue(clients[i].direction)
             }
 
             return wb

@@ -237,7 +237,7 @@
     <string name="bill_ticket_pdf_value">Precio: %1$.2f</string>
     <string name="bill_ticket_pdf_iva">Iva(%%): %1$.2f</string>
     <string name="bill_ticket_pdf_discount">Descuento(%%): %1$.2f</string>
-    <string name="bill_ticket_pdf_amount">Cantidad: %1$f</string>
+    <string name="bill_ticket_pdf_amount">Cantidad: %1$.2f</string>
     <string name="bill_ticket_pdf_subtotal">Subtotal: %1$.2f</string>
     <string name="bill_ticket_pdf_iva_total">Iva: %1$.2f</string>
     <string name="bill_ticket_pdf_total_bill">Total: %1$.2f</string>
