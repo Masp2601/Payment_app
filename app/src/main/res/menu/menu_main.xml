@@ -1,7 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.softmed.payment.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
     <item
         android:id="@+id/action_home"
         android:orderInCategory="100"
@@ -26,7 +25,7 @@
         android:id="@+id/action_clientes"
         android:orderInCategory="104"
         android:title="@string/action_clientes"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_client_debts"
         android:orderInCategory="105"
