@@ -19,8 +19,8 @@ android {
         applicationId "com.softmed.payment"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 32
-        versionName "1.21"
+        versionCode 33
+        versionName "1.22"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled = true
@@ -71,6 +71,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    implementation 'androidx.core:core-ktx:1.6.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'

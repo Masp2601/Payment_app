@@ -12,6 +12,9 @@ import com.softmed.payment.storage.ClientesContract
 import com.softmed.payment.storage.InvoiceItemsContract
 import com.softmed.payment.storage.TransactionContract
 import org.jetbrains.anko.AnkoLogger
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import java.io.File
 
 
 class PdfHelper(private val ctx: Context) : AnkoLogger {
@@ -43,6 +46,15 @@ class PdfHelper(private val ctx: Context) : AnkoLogger {
         PreferenceManager.getDefaultSharedPreferences(ctx).getString(ctx.getString(R.string.pref_key_telephone_number), "")
     }
 
+     private val logoBitmap by lazy {
+        val file = File(ctx.filesDir, ".jpg")
+        if (file.exists()) {
+            BitmapFactory.decodeFile(file.absolutePath)
+        } else {
+            null
+        }
+    }
+
     private var linePosition = 0f
 
     fun createBillTickerPdf(subtotal: Double,
@@ -62,6 +74,10 @@ class PdfHelper(private val ctx: Context) : AnkoLogger {
         val canvas = page.canvas
         val paint = Paint()
         linePosition = 0f
+        logoBitmap?.let {
+            val scaledBitmap = Bitmap.createScaledBitmap(it, 100, 100, false)
+            canvas.drawBitmap(scaledBitmap, MARGIN_LEFT, newLinePosition(), paint)
+        }
         centerOnCanvas(canvas, companyName!!)
         centerOnCanvas(canvas, companyAddress!!)
         centerOnCanvas(canvas, "NIT: $companyNit")
@@ -138,10 +154,11 @@ class PdfHelper(private val ctx: Context) : AnkoLogger {
             positionY = newLinePosition()
             val amount = resource.getString(R.string.bill_ticket_pdf_amount, items[i].itemAmount)
             canvas.drawText(amount, rightSide, positionY, paint)
-
-            positionY = newLinePosition()
-            val pass = resource.getString(R.string.bill_credit_deposit, (payment.paymentCreditDeposit))
-            canvas.drawText(pass, rightSide, positionY, paint)
+            if (TransactionContract.PaymentMethods.Credit.ordinal == payment.paymentType) {
+                positionY = newLinePosition()
+                val pass = resource.getString(R.string.bill_credit_deposit, (payment.paymentCreditDeposit))
+                canvas.drawText(pass, rightSide, positionY, paint)
+            }
         }
     }
 

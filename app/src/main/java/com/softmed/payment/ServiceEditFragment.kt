@@ -77,7 +77,7 @@ class ServiceEditFragment : DialogFragment() {
         return builder.create()
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
 
         try {

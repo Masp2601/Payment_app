@@ -53,6 +53,15 @@ abstract class BaseActivity : AppCompatActivity(), AnkoLogger {
                 }
                 return true
             }
+            R.id.action_image -> {
+                if (this !is ClientesActivity) {
+                    menu?.close()
+                    val intent = Intent(this, Image_logo::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    startActivity(intent)
+                }
+                return true
+            }
             R.id.action_services -> {
                 if (this !is ServicesActivity) {
                     val intent = Intent(this, ServicesActivity::class.java)

@@ -146,7 +146,7 @@ class ShowBillFragment : DialogFragment(), AnkoLogger {
         return view
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is OnFragmentInteractionListener) {
             mListener = context
